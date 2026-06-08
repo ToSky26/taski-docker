@@ -14,7 +14,7 @@ services:
     restart: always
     env_file: .env
     volumes:
-      - static_volume:/backend_static
+      - static_volume:/app/staticfiles
   frontend:
     image: tosky26/taski_frontend
     restart: always
@@ -27,6 +27,6 @@ services:
     restart: always
     env_file: .env
     volumes:
-      - static_volume:/staticfiles/
+      - static_volume:/staticfiles
     ports:
       - 8000:80
